@@ -1,0 +1,51 @@
+.custom-radios div {
+display: inline-block; }
+
+.custom-radios .image-input {
+display: none; }
+.custom-radios .image-input + label {
+color: #333;
+font-family: Arial, sans-serif;
+font-size: 14px; }
+.custom-radios .image-input + label span {
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  margin: -1px 4px 0 0;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  text-align: center;
+  line-height: 120px; }
+  .custom-radios .image-input + label span img {
+  opacity: 1;
+  height: 80px;
+  width: auto;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease; }
+  .custom-radios .image-input + label span .dashboard-img {
+  width: 90px;
+  height: auto; }
+.custom-radios .image-input + label span {
+background-color: #ffffff; }
+.custom-radios .image-input:checked + label span {
+background-color: #e9ecef;
+-webkit-transform: scale(1.05);
+-ms-transform: scale(1.05);
+transform: scale(1.05); }
+.custom-radios label {
+  position: relative;
+}
+.custom-radios label a small {
+  position: absolute;
+  z-index: 999;
+  bottom: -20px;
+  left: 30%;
+
+}

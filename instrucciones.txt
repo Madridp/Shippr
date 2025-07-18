@@ -1,0 +1,25 @@
+🙏🙏 Gracias por tu compra, nos ayuda a seguir creando más contenido
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+Instrucciones básicas
+
+Recuerda seguir los siguientes pasos para poder utilizar el sistema Shippr de forma rápida y sencilla:
+
+- Descarga y descomprime en tu servidor local o remoto el contenido.
+- Abre el archivo de configuración dentro de app/config/jserp_config.php y actualiza los valores con base a donde hayas colocado tu proyecto o sistema (LOCAL_FOLDER y REMOTE_FOLDER), si tienes token de Google Maps ingrésalo en STATIC_GMAPS.
+- Abre el archivo de configuración de base de datos dentro de app/config/database_config.php y establece los valores de la base de datos local y remota.
+- Abre tu gestor de bases de datos y crea la base correspondiente a Shippr y ejecuta el archivo .sql incluido db_shippr.sql
+- Deberás instalar las dependencias externas usando Composer, asegúrate de tener instalado dicho programa en tu computadora y ejecuta el siguiente comando dentro de la carpeta app (donde se encuentra composer.json) del proyecto: composer install
+- Una vez todo lo anterior esté listo, podrás probar y usar Shippr, puedes realizar todos los cambios que necesites al proyecto, los usuarios base de prueba generados son diversos con diferentes roles pero los generales son: admin, root, regular, cualquiera de ellos con password "admin".
+- Listo, recuerda que este proyecto es meramente educativo, pero puedes usarlo de base para tu propio emprendimiento
+
+----------------------------------------------------------------------------
+----------------------------------------------------------------------------
+
+Ajustes extras
+
+Si requieres utilizar un correo electrónico con servidor SMTP, deberás actualizar los valores de las constantes en app/core/serp_config.php y los valores de SMTP a true, además de todos los valores de tu servidor en las constantes siguientes:
+
+Solo si tienes problemas para iniciar sesión o enviar correos deberás cambiar SMTP_DEBUG a true para obtener todo el log de la conexión que estás intentando hacer.

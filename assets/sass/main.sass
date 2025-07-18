@@ -1,0 +1,351 @@
+// SERP 1.0.5.6
+// By joystick design
+
+/** Variables to use */
+@import 'variables.sass'
+
+// Theme customizing
+.pvr-wrapper
+  .pvr-box
+    .pvr-header
+      padding-bottom: 1.5rem
+      &:after
+        height: 2px
+        width: 9rem
+#data-table
+  thead
+    th, td
+      background: #343A40
+      color: white
+.img-empty-state
+  width: 40%
+
+// Images with buttons for actions
+.serp-img-container
+  width: 100%
+  height: 250px
+  position: relative
+  overflow: hidden
+  &:hover
+    .serp-l-r-button
+      -webkit-transform: translateX(0%)
+      -moz-transform: translateX(0%)
+      -ms-transform: translateX(0%)
+      -o-transform: translateX(0%)
+      transform: translateX(0%)
+    .serp-l-l-button
+      -webkit-transform: translateX(0%)
+      -moz-transform: translateX(0%)
+      -ms-transform: translateX(0%)
+      -o-transform: translateX(0%)
+      transform: translateX(0%)
+.serp-l-button
+  position: absolute
+  padding: 10px
+  width: 100px
+  max-width: 40%
+  min-height: 100%
+  cursor: pointer
+  -webkit-transition: 0.3s all ease-in-out
+  -moz-transition: 0.3s all ease-in-out
+  -ms-transition: 0.3s all ease-in-out
+  -o-transition: 0.3s all ease-in-out
+  transition: 0.3s all ease-in-out
+
+// @for $i from 1 through 4
+//   .serp-l-button:first-child:nth-last-child(n+#{$i}),
+//   .serp-l-button:first-child:nth-last-child(n+#{$i}) ~ .serp-l-button
+//     height: 100% / $i
+//     min-height: 100% / $i
+//     color: red
+
+.serp-l-r-button
+  top: 0px
+  right: 0px
+  -webkit-transform: translateX(100%)
+  -moz-transform: translateX(100%)
+  -ms-transform: translateX(100%)
+  -o-transform: translateX(100%)
+  transform: translateX(100%)
+
+.serp-l-l-button
+  top: 0px
+  left: 0px
+  -webkit-transform: translateX(-100%)
+  -moz-transform: translateX(-100%)
+  -ms-transform: translateX(-100%)
+  -o-transform: translateX(-100%)
+  transform: translateX(-100%)
+
+.serp-l-button-danger
+  background: $danger
+  color: white
+  border: none
+  &:hover
+    background: darken($danger, 5)
+
+// SWITCH INPUTS
+.onoffswitch 
+  position: relative 
+  width: 40px
+  -webkit-user-select: none 
+  -moz-user-select: none 
+  -ms-user-select: none
+
+.onoffswitch-checkbox 
+  display: none
+
+.onoffswitch-label 
+  display: block 
+  overflow: hidden 
+  cursor: pointer
+  border: 1px solid #aaa 
+  border-radius: 20px
+
+.onoffswitch-inner 
+  display: block 
+  width: 200% 
+  margin-left: -100%
+  transition: margin 0.3s ease-in 0s
+
+.onoffswitch-inner:before, .onoffswitch-inner:after 
+  display: block 
+  float: left 
+  width: 50% 
+  height: 10px 
+  padding: 0 
+  line-height: 5px
+  font-size: 14px 
+  color: white 
+  font-family: Trebuchet, Arial, sans-serif 
+  font-weight: bold
+  box-sizing: border-box
+
+.onoffswitch-inner:before 
+  content: ""
+  padding-left: 10px
+  background-color: $success 
+  color: #FFFFFF
+
+.onoffswitch-inner:after 
+  content: ""
+  padding-right: 10px
+  background-color: #EEEEEE 
+  color: #999999
+  text-align: right
+
+.onoffswitch-switch 
+  display: block 
+  width: 20px 
+  margin: -5px
+  background: #FFFFFF
+  position: absolute 
+  top: 0 
+  bottom: 0
+  right: 31px
+  border: 1px solid #aaa 
+  border-radius: 50px
+  transition: all 0.3s ease-in 0s 
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner 
+  margin-left: 0
+
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch 
+  right: 0px
+
+// Fixing datatable display
+table.dataTable
+  border-collapse: collapse !important
+.vmiddle
+  vertical-align: middle !important
+  tr
+    td,th
+      vertical-align: middle !important
+  thead,tbody
+    tr,td,th
+      vertical-align: middle !important
+
+
+// Ribbons
+.corner-ribbon
+  z-index: 9999999999999999999999
+  width: 200px
+  background: $danger
+  position: absolute
+  top: 25px
+  left: -50px
+  text-align: center
+  line-height: 40px
+  letter-spacing: 1px
+  color: #f0f0f0
+  transform: rotate(-45deg)
+  -webkit-transform: rotate(-45deg)
+  box-shadow: 0 0 3px rgba(0,0,0,.3)
+
+
+/* Custom styles */
+
+.ribbon-sticky
+  position: fixed
+
+
+/* Different positions */
+
+.top-left
+  top: 25px
+  left: -50px
+  transform: rotate(-45deg)
+  -webkit-transform: rotate(-45deg)
+
+
+.top-right
+  top: 25px
+  right: -50px
+  left: auto
+  transform: rotate(45deg)
+  -webkit-transform: rotate(45deg)
+
+
+.bottom-left
+  top: auto
+  bottom: 25px
+  left: -50px
+  transform: rotate(45deg)
+  -webkit-transform: rotate(45deg)
+
+
+.bottom-right
+  top: auto
+  right: -50px
+  bottom: 25px
+  left: auto
+  transform: rotate(-45deg)
+  -webkit-transform: rotate(-45deg)
+
+// CRM STYLES
+.crm-task-image
+  margin-top: 20px
+  border-radius: 50px
+  background: $warning
+  width: 40px
+  height: 40px
+  overflow: hidden
+  position: relative
+  z-index: 6
+  img
+    max-width: 50%
+    position: absolute
+    top: 50%
+    left: 50%
+    -o-transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%)
+.crm-task-line
+  width: 5px
+  height: 100%
+  position: absolute
+  top: 0px
+  left: 34px
+  background: #ebebeb
+  z-index: 5
+.crm-task-wrapper
+  margin-top: 10px
+  border: 1px solid #eaeaea
+  border-radius: 5px
+  background: #f9f9f9
+  .crm-task-header
+    padding: 10px 20px
+    border-bottom: 1px solid #eaeaea
+    span
+      font-size: 14px
+    small
+      font-size: 12px
+  .crm-task-body
+    padding: 10px 20px
+
+// Calendario de servicios
+.wrapper-calendar
+  width: 100%
+  max-width: 100%
+  min-width: 100%
+  overflow: hidden
+  padding: 2px
+  .test-calendar
+    width: 100%
+    border-collapse: collapse
+    td
+      vertical-align: top
+      border: 1px solid #ccc
+      padding: 5px 10px 20px 10px;
+      width: calc(100%/7)
+      height: 200px
+      overflow: hidden
+      &:hover
+        position: relative
+        background: #e6e6e6
+        .test-calendar-button
+          display: block
+      .test-calendar-button
+        position: absolute
+        bottom: 5px
+        right: 5px
+        padding: 3px 5px
+        display: none
+    .blank
+      background: #eee
+    .test-day 
+      th
+        background: #ba3423
+        color: #fff
+        font-weight: bold
+        text-align: center
+        padding: 10px 0px
+    .event
+      display: block
+      margin-top: 5px
+      padding: 5px
+      width: 100%
+      font-size: 0.75em
+      max-height: 5em
+      overflow: hidden
+.event-default
+  background: #fff2dd
+  border: 1px solid #ffffdd
+  color: #555
+.event-success
+  border: 1px solid darken($success, 5)
+  background: $success
+  color: white
+  a
+    color: white
+    text-decoration: underline
+
+// Remover spinner en number inputs
+.hide-spinner
+  -webkit-appearance: none 
+  margin: 0
+  -moz-appearance:textfield
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px)
+  .img-empty-state
+    width: 100% !important
+ 
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (max-width: 768px)
+  .img-empty-state
+    width: 70%  
+ 
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 992px)
+ .img-empty-state
+    width: 60%
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) 
+  .img-empty-state
+    width: 100%
+
+
+@import 'shippr.sass'
